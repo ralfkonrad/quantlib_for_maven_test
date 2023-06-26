@@ -34,7 +34,7 @@ jobs:
           cache: gradle
 
       - name: Build on ${{ matrix.os }} and jdk${{ matrix.java-vserion }}
-        id: build-${{ matrix.os }}-jdk${{ matrix.java-vserion }}
+        id: build
         shell: bash
         run: |
           ./gradlew clean build -i
