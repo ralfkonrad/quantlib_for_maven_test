@@ -33,7 +33,7 @@ jobs:
           distribution: "temurin"
           cache: gradle
 
-      - name: Build on ${{ matrix.os }} and jdk${{ matrix.java-vserion }}
+      - name: Build on ${{ matrix.os }} and jdk${{ matrix.java-version }}
         id: build
         shell: bash
         run: |
