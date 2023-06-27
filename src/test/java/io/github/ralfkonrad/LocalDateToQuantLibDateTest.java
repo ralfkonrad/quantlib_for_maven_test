@@ -1,7 +1,9 @@
-package org.quantlib;
+package io.github.ralfkonrad;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.quantlib.Date;
+import org.quantlib.Month;
 
 import java.time.LocalDate;
 
