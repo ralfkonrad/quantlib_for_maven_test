@@ -8,7 +8,7 @@ updates:
       interval: "daily"
 
   # Maintain dependencies for maven
-  - package-ecosystem: "gradle"
+  - package-ecosystem: "maven"
     directory: "/"
     schedule:
       interval: "daily"

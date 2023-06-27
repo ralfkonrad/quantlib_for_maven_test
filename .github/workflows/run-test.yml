@@ -31,10 +31,10 @@ jobs:
         with:
           java-version: ${{ matrix.java-version }}
           distribution: "temurin"
-          cache: gradle
+          cache: maven
 
       - name: Build on ${{ matrix.os }} and jdk${{ matrix.java-version }}
         id: build
         shell: bash
         run: |
-          ./gradlew clean build -i
+          ./mvnw --batch-mode --show-version clean verify
