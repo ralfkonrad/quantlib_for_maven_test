@@ -40,6 +40,5 @@ jobs:
         shell: bash
         run: |
           ./mvnw --batch-mode --version
-          ./mvnw --batch-mode versions:set-property -Dproperty=quantlib.version -DnewVersion=${{ matrix.quantlib-version }}
-          ./mvnw --batch-mode dependency:purge-local-repository -DreResolve=true
-          ./mvnw --batch-mode clean test
+          ./mvnw --batch-mode                    versions:set-property -Dproperty=quantlib.version -DnewVersion=${{ matrix.quantlib-version }}
+          ./mvnw --batch-mode --update-snapshots clean test
