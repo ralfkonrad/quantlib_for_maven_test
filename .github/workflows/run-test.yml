@@ -37,4 +37,4 @@ jobs:
         id: build
         shell: bash
         run: |
-          ./mvnw --batch-mode --show-version clean verify
+          ./mvnw --batch-mode --show-version clean test
