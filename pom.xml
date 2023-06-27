@@ -45,6 +45,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <quantlib.version>1.31.0-SNAPSHOT</quantlib.version>
     </properties>
 
     <dependencyManagement>
@@ -52,7 +53,7 @@
             <dependency>
                 <groupId>io.github.ralfkonrad</groupId>
                 <artifactId>quantlib</artifactId>
-                <version>1.31.0-SNAPSHOT</version>
+                <version>${quantlib.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -227,6 +228,17 @@
     </build>
 
     <profiles>
+        <profile>
+            <id>localBuild</id>
+            <activation>
+                <property>
+                    <name>localBuild</name>
+                </property>
+            </activation>
+            <properties>
+                <quantlib.version>0.1.0-SNAPSHOT</quantlib.version>
+            </properties>
+        </profile>
         <profile>
             <id>jdk17</id>
             <activation>

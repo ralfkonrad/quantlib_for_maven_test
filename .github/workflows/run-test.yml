@@ -12,6 +12,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        quantlib-version:
+         - 1.31.0-SNAPSHOT
         java-version:
           - 11
           - 17
@@ -33,8 +35,11 @@ jobs:
           distribution: "temurin"
           cache: maven
 
-      - name: Build on ${{ matrix.os }} and jdk${{ matrix.java-version }}
+      - name: Build on ${{ matrix.os }} and jdk ${{ matrix.java-version }}
         id: build
         shell: bash
         run: |
-          ./mvnw --batch-mode --show-version clean test
+          ./mvnw --batch-mode --version
+          ./mvnw --batch-mode versions:set-property -Dproperty=quantlib.version -DnewVersion=${{ matrix.quantlib-version }}
+          ./mvnw --batch-mode dependency:purge-local-repository -DreResolve=true
+          ./mvnw --batch-mode clean test
