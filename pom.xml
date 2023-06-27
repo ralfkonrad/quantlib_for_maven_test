@@ -51,7 +51,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.github.ralfkonrad</groupId>
+                <groupId>io.github.ralfkonrad.quantlib_for_maven</groupId>
                 <artifactId>quantlib</artifactId>
                 <version>${quantlib.version}</version>
                 <scope>test</scope>
@@ -80,7 +80,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.github.ralfkonrad</groupId>
+            <groupId>io.github.ralfkonrad.quantlib_for_maven</groupId>
             <artifactId>quantlib</artifactId>
             <scope>test</scope>
         </dependency>
@@ -235,11 +235,6 @@
     <profiles>
         <profile>
             <id>localBuild</id>
-            <activation>
-                <property>
-                    <name>localBuild</name>
-                </property>
-            </activation>
             <properties>
                 <quantlib.version>0.1.0-SNAPSHOT</quantlib.version>
             </properties>
