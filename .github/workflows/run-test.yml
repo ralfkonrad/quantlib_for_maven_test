@@ -14,6 +14,8 @@ jobs:
       matrix:
         quantlib-version:
          - 1.31.0-SNAPSHOT
+         - 1.31.0-RC1
+         - 1.31.0-RC2
         java-version:
           - 11
           - 17
