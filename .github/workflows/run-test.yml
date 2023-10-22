@@ -17,6 +17,7 @@ jobs:
           - 1.33.0-SNAPSHOT
         java-version:
           - 17
+          - 21
         os:
           - ubuntu-20.04
           - ubuntu-22.04
