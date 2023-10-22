@@ -13,11 +13,9 @@ jobs:
       fail-fast: false
       matrix:
         quantlib-version:
-          - 1.31.0
-          - 1.31.1
-          - 1.32.0-SNAPSHOT
+          - 1.32.0
+          - 1.33.0-SNAPSOT
         java-version:
-          - 11
           - 17
         os:
           - ubuntu-20.04
