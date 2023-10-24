@@ -13,17 +13,17 @@ jobs:
       fail-fast: false
       matrix:
         quantlib-version:
-          - 1.31.0
-          - 1.31.1
-          - 1.32.0-SNAPSHOT
+          - 1.32.0
+          - 1.33.0-SNAPSHOT
         java-version:
-          - 11
           - 17
+          - 21
         os:
           - ubuntu-20.04
           - ubuntu-22.04
           - macos-11
           - macos-12
+          - macos-13
           - windows-2019
           - windows-2022
     runs-on: ${{ matrix.os }}
