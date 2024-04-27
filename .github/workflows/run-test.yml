@@ -9,13 +9,13 @@ on:
 
 jobs:
   test-build:
+    name: Test build for ql v${{ matrix.quantlib-version }}, jdk${{ matrix.java-version }} and os ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         quantlib-version:
-          - 1.32.0
-          - 1.33.0
-          - 1.34.0-SNAPSHOT
+          - 1.34.0
+          - 1.35.0-SNAPSHOT
         java-version:
           - 17
           - 21
