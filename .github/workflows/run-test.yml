@@ -24,8 +24,10 @@ jobs:
           - ubuntu-22.04
           - ubuntu-24.04
           - macos-12
-          - macos-13
-          - macos-14
+          - macos-13-large      # amd64 architecture
+          - macos-13-xlarge     # arm64 architecture
+          - macos-14-large      # amd64 architecture
+          - macos-14-xlarge     # arm64 architecture
           - windows-2019
           - windows-2022
     runs-on: ${{ matrix.os }}
