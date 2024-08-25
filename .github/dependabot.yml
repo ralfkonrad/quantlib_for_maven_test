@@ -6,9 +6,13 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+      time: "05:28"
+      timezone: "Europe/Berlin"
 
   # Maintain dependencies for maven
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
       interval: "daily"
+      time: "05:28"
+      timezone: "Europe/Berlin"
