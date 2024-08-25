@@ -1,11 +1,11 @@
 name: Test maven download
 
 on:
-  push: { }
-  pull_request: { }
-  workflow_dispatch: { }
+  push: {}
+  pull_request: {}
+  workflow_dispatch: {}
   schedule:
-    - cron: '37 4 * * *'
+    - cron: "37 4 * * *"
 
 jobs:
   test-build:
@@ -24,10 +24,14 @@ jobs:
           - ubuntu-22.04
           - ubuntu-24.04
           - macos-12
-          - macos-13        # amd64 architecture
-          - macos-14        # arm64 architecture
+          - macos-13
+          - macos-14 # arm64 architecture
           - windows-2019
           - windows-2022
+        exclude:
+          - os: macos-14
+            quantlib-version: 1.35.0 # QuantLib 1.35.0 does not support arm64 architecture
+
     runs-on: ${{ matrix.os }}
 
     steps:
