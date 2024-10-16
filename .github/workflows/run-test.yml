@@ -14,8 +14,8 @@ jobs:
       fail-fast: false
       matrix:
         quantlib-version:
-          - 1.35.0
-          - 1.36.0-SNAPSHOT
+          - 1.36.0
+          - 1.37.0-SNAPSHOT
         java-version:
           - 17
           - 21
@@ -28,11 +28,6 @@ jobs:
           - macos-15 # arm64 architecture
           - windows-2019
           - windows-2022
-        exclude:
-          - os: macos-14
-            quantlib-version: 1.35.0 # QuantLib 1.35.0 does not support arm64 architecture
-          - os: macos-15
-            quantlib-version: 1.35.0 # QuantLib 1.35.0 does not support arm64 architecture
 
     runs-on: ${{ matrix.os }}
 
