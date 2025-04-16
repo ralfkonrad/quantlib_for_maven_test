@@ -20,7 +20,6 @@ jobs:
           - 17
           - 21
         os:
-          - ubuntu-20.04
           - ubuntu-22.04
           - ubuntu-24.04
           - macos-13
@@ -28,6 +27,7 @@ jobs:
           - macos-15 # arm64 architecture
           - windows-2019
           - windows-2022
+          - windows-2025
 
     runs-on: ${{ matrix.os }}
 
