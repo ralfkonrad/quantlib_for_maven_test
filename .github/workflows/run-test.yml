@@ -14,8 +14,8 @@ jobs:
       fail-fast: false
       matrix:
         quantlib-version:
-          - 1.37.0
-          - 1.38.0-SNAPSHOT
+          - 1.38.0
+          - 1.39.0-SNAPSHOT
         java-version:
           - 17
           - 21
