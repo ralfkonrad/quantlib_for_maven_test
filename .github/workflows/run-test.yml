@@ -25,7 +25,6 @@ jobs:
           - macos-13
           - macos-14 # arm64 architecture
           - macos-15 # arm64 architecture
-          - windows-2019
           - windows-2022
           - windows-2025
 
