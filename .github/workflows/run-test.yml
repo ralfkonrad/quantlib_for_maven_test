@@ -22,13 +22,20 @@ jobs:
           - 25
         os:
           - ubuntu-22.04
+          - ubuntu-22.04-arm
           - ubuntu-24.04
+          - ubuntu-24.04-arm
           - macos-14
           - macos-15
           - macos-15-intel
           - macos-26
           - windows-2022
           - windows-2025
+        exclude:
+          - quantlib-version: 1.41.0
+            os: ubuntu-22.04-arm
+          - quantlib-version: 1.41.0
+            os: ubuntu-24.04-arm
 
     runs-on: ${{ matrix.os }}
 
